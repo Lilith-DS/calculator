@@ -1,0 +1,109 @@
+/*
+....colors....
+....white #FFF
+....blue-sky #87CEEB
+....purple #7B68EE
+....purple-light #C5BDC9---
+....grey #808080
+*/
+
+body {
+	height: 100vh;
+	background: linear-gradient(#87CEEB, #7B68EE);
+}
+
+h1 {
+	text-align: center;
+	color: #FFF;
+}
+
+.calculator {
+	padding: 15px;
+ 	height: 460px;
+  	width: 300px; 
+  	margin: 40px auto;
+  	border-radius: 20px;
+  	background: #FFF;
+  	font-family: Arial;
+}
+
+.result {
+	height: 80px;
+	padding: 10px;
+	display: grid;
+	justify-items: end;
+	align-items: end;
+	margin-bottom: 5px;
+	border: 2px solid #C5BDC9;
+	border-radius: 10px;
+}
+
+.result p {
+	text-align: right;
+	font-size: 50px;
+	margin: 0;
+}
+
+/*_________________________________________________________*/
+
+.buttons {
+	display: grid;
+	grid-template-areas: 
+	"c plus-minus percent division"
+	"num-7 num-8 num-9 multiply"
+	"num-4 num-5 num-6 minus"
+	"num-1 num-2 num-3 plus"
+	"num-0 num-0 point equals";
+	grid-gap: 10px;
+	justify-items: center;
+	justify-content: center;
+}
+
+.number.num-0 {
+	grid-area: num-0;
+	width: 100%;
+}
+
+.symbol, .number {
+	height: 60px;
+  	width: 60px;
+  	background: linear-gradient(45deg, #E6E6FA, #7B68EE);
+ 	border: none;
+ 	box-shadow: 2px 2px 2px #808080;
+ 	font-size: 17px;
+ 	cursor: pointer;
+ 	text-align: center;
+ 	line-height: 60px;
+ 	user-select: none;
+}
+
+.symbol {
+  	border-radius: 50%; 
+}
+
+.number {
+  	border-radius: 5px; 	
+}
+
+/*_________________________________________________________*/
+
+
+.number:hover {
+	filter: brightness(120%);
+	box-shadow: -1px -1px 1px #FFF;
+	transition: 0.5s;
+}
+
+.symbol:hover {
+	filter: brightness(120%);
+	box-shadow: -1px -1px 1px #FFF;
+	transition: 0.5s;
+}
+
+.number:active {
+	filter: brightness(90%);
+}
+
+.symbol:active {
+	filter: brightness(90%);
+}
