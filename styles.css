@@ -46,8 +46,6 @@ h1 {
 	color: #383838;
 }
 
-/*_________________________________________________________*/
-
 .buttons {
 	display: grid;
 	grid-template-areas: 
@@ -84,9 +82,6 @@ h1 {
 .number {
   	border-radius: 5px; 
 }
-
-/*_________________________________________________________*/
-
 
 .number:hover {
 	filter: brightness(120%);
